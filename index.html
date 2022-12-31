@@ -92,10 +92,11 @@
                         .md5 + "' target='_blank'>" + info[i].title + "</a></td>").appendTo(str);
 
                     // Artist
-                    $("<td width='25%'>" +
+                    $("<td width='25%'><p>" +
                         "<a href='" + info[
                             i]
-                        .song_url + "' target='_blank'>" + info[i].artist + "</a></td>").appendTo(str);
+                        .song_url + "' target='_blank'>" + info[i].artist + "</a>
+                    </p><p style="line-height: 40%">" + info[i].event + "</p></td>").appendTo(str);
 
                     // Comment
                     $("<td width='10%'>" + info[i].comment + "</td>").appendTo(str);
