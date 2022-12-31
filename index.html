@@ -30,7 +30,7 @@
             <p>obj:name94の譜面一覧です。</p>
             <p>難易度表の読み込みと表示に数秒かかります。</p>
             <hr>
-            <p class="mb-0">表記のないものはすべて14鍵差分です。一部は申し訳程度に細分化した難易度査定をしていますが、制作した差分の一覧表としての意味合いが強いのでかなり大雑把な区分になっています。</p>
+            <p class="mb-0">表記のないものはすべて14鍵差分です。一部、細分化した難易度を載せていますが、制作した差分の一覧表としての意味合いが強いのでかなり大雑把な区分になっています。</p>
         </div>
 
 
@@ -92,11 +92,11 @@
                         .md5 + "' target='_blank'>" + info[i].title + "</a></td>").appendTo(str);
 
                     // Artist
-                    $("<td width='25%'><p>" +
+                    $("<td width='25%'>" +
                         "<a href='" + info[
                             i]
-                        .song_url + "' target='_blank'>" + info[i].artist + "</a>
-                    </p><p style="line-height: 40%">" + info[i].event + "</p></td>").appendTo(str);
+                        .song_url + "' target='_blank'>" + info[i].artist + "</a><p>" + info[
+                            i].event + "</p></td>").appendTo(str);
 
                     // Comment
                     $("<td width='10%'>" + info[i].comment + "</td>").appendTo(str);
