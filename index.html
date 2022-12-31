@@ -27,7 +27,7 @@
     <div class="container">
 
         <div class="alert alert-success mb-3" role="alert">
-            <p>obj:name94の譜面一覧。</p>
+            <p>obj:name94の譜面一覧です。</p>
             <p>難易度表の読み込みと表示に数秒かかります。</p>
             <hr>
             <p class="mb-0">表記のないものはすべて14鍵差分です。一部は申し訳程度に細分化した難易度査定をしていますが、制作した差分の一覧表としての意味合いが強いのでかなり大雑把な区分になっています。</p>
@@ -55,7 +55,7 @@
                 var obj = $("#table_int");
 
                 obj.html("");
-                $("<thead class='table-dark'><tr><th>Level</th><th>Youtube</th><th>Genre</th><th>Title</th><th>Artist</th><th>Chart</th><th>Notes</th><th>Total</th><th>Rank</th><th>Comment</th></tr></thead><tbody>")
+                $("<thead class='table-dark'><tr><th>Level</th><th>Title</th><th>Artist</th><th>Comment</th></tr></thead><tbody>")
                     .appendTo(obj);
                 var obj_sep = null;
                 for (var i = 0; i < info.length; i++) {
@@ -76,35 +76,14 @@
                     // Level
                     $("<td width='5%'>" + mark + x + "</td>").appendTo(str);
 
-                    // Youtube
-                    $("<td width='5%'>" +
-                        "<a href='" + info[i].youtube + "' target='_blank'>動画</a></td>").appendTo(str);
-
-                    // Genre
-                    $("<td width='20%'>" + info[i].genre + "</td>").appendTo(str);
-
                     // Title
-                    $("<td width='35%'>" +
-                        "<a href='http://www.dream-pro.info/~lavalse/LR2IR/search.cgi?mode=ranking&bmsmd5=" + info[i]
+                    $("<td width='45%'>" +
+                        "<a href='http://www.dream-pro.info/~lavalse/LR2IR/search.cgi?mode=ranking&bmsmd5=" + info[
+                            i]
                         .md5 + "' target='_blank'>" + info[i].title + "</a></td>").appendTo(str);
 
                     // Artist
-                    $("<td width='35%'><p>" +
-                        "<a href='" + info[i].song_url + "' target='_blank'>" + info[i].title + "</a>
-                        </p><p style="line-height: 40%">" + info[i].event + "</p></td>").appendTo(str);
-
-                    // Chart
-                    $("<td width='5%'>" +
-                        "<a href='" + info[i].dif_url + "' target='_blank'>差分</a></td>").appendTo(str);
-
-                    // Notes
-                    $("<td width='5%'>" + info[i].notes + "</td>").appendTo(str);
-
-                    // Total
-                    $("<td width='5%'>" + info[i].total + "</td>").appendTo(str);
-
-                    // Rank
-                    $("<td width='5%'>" + info[i].rank + "</td>").appendTo(str);
+                    $("<td width='40%'>" + info[i].artist + "</td>").appendTo(str);
 
                     // Comment
                     $("<td width='10%'>" + info[i].comment + "</td>").appendTo(str);
