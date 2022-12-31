@@ -77,7 +77,7 @@
                     $("<td width='5%'>" + mark + x + "</td>").appendTo(str);
 
                     // Youtube
-                    $("<td width='30%'>" +
+                    $("<td width='5%'>" +
                         "<a href='" + info[
                             i]
                         .youtube + "' target='_blank'>" + "動画" + "</a></td>").appendTo(str);
@@ -92,7 +92,10 @@
                         .md5 + "' target='_blank'>" + info[i].title + "</a></td>").appendTo(str);
 
                     // Artist
-                    $("<td width='25%'>" + info[i].artist + "</td>").appendTo(str);
+                    $("<td width='25%'>" +
+                        "<a href='" + info[
+                            i]
+                        .song_url + "' target='_blank'>" + info[i].artist + "</a></td>").appendTo(str);
 
                     // Comment
                     $("<td width='10%'>" + info[i].comment + "</td>").appendTo(str);
