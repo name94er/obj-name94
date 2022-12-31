@@ -55,13 +55,13 @@
                 var obj = $("#table_int");
 
                 obj.html("");
-                $("<thead class='table-dark'><tr><th>Level</th><th>Genre</th><th>Title</th><th>Artist</th><th>Comment</th></tr></thead><tbody>")
+                $("<thead class='table-dark'><tr><th>Level</th><th>Youtube</th><th>Genre</th><th>Title</th><th>Artist</th><th>Comment</th></tr></thead><tbody>")
                     .appendTo(obj);
                 var obj_sep = null;
                 for (var i = 0; i < info.length; i++) {
                     if (x != info[i].level) {
                         if (obj_sep != null) {
-                            obj_sep.html("<td colspan='5'>" + "<b>" + mark + x + " (" + count +
+                            obj_sep.html("<td colspan='6'>" + "<b>" + mark + x + " (" + count +
                                 "譜面)</b></td>");
                         }
                         obj_sep = $("<tr class='table-dark' style='text-align:center' id='" + mark + info[i].level +
@@ -76,8 +76,14 @@
                     // Level
                     $("<td width='5%'>" + mark + x + "</td>").appendTo(str);
 
+                    // Youtube
+                    $("<td width='30%'>" +
+                        "<a href='" + info[
+                            i]
+                        .youtube + "' target='_blank'>"動画 + "</a></td>").appendTo(str);
+
                     // Genre
-                    $("<td width='20%'>" + info[i].genre + "</td>").appendTo(str);
+                    $("<td width='15%'>" + info[i].genre + "</td>").appendTo(str);
 
                     // Title
                     $("<td width='30%'>" +
@@ -97,7 +103,7 @@
                 $("</tbody>").appendTo(obj);
 
                 if (obj_sep != null) {
-                    obj_sep.html("<td class='table-dark' style='text-align:center' colspan='4'>" + "<b>" + mark + x +
+                    obj_sep.html("<td class='table-dark' style='text-align:center' colspan='6'>" + "<b>" + mark + x +
                         " (" + count + "譜面)</b></td>");
                 }
             }
