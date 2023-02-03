@@ -107,16 +107,16 @@
 
                     // Artist
                     if (info[i].url != "" && info[i].url != null) {
-                      $("<td width='25%'>" + info[i].artist + "<p>" + info[
-                            i].event + "</p></td>").appendTo(str);
-                        }
-                    else {
                       $("<td width='25%'>" +
                         "<a href='" + info[
                             i]
                         .url + "' target='_blank'>" + info[i].artist + "</a><p>" + info[
                             i].event + "</p></td>").appendTo(str);
                     }
+                    else {
+                      $("<td width='25%'>" + info[i].artist + "<p>" + info[
+                            i].event + "</p></td>").appendTo(str);
+                        }                    
 
                     // Chart
                     $("<td width='3%'>" +
