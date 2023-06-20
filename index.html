@@ -119,10 +119,16 @@
                         }                    
 
                     // Chart
+                    if (info[i].url_diff != "" && info[i].url_diff != null) {
                     $("<td width='3%'>" +
                         "<a href='" + info[
                             i]
                         .url_diff + "' target='_blank'>" + "差分" + "</a></td>").appendTo(str);
+                    }
+                    else {
+                    $("<td width='3%'>" +
+                        " + "同梱" + "</td>").appendTo(str);
+                        }                    
 
                     // Comment
                     $("<td width='20%'>" + info[i].comment + "</td>").appendTo(str);
