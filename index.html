@@ -111,20 +111,20 @@
                     $("<td width='30%'>" +
                         "<a href='http://www.ribbit.xyz/bms/score/view?md5=" + info[
                             i]
-                        .md5 + "' target='_blank'>" + info[i].title + "</a><p>" + info[
-                            i].notes + "Notes/" + info[i].total + "Total/" + info[i].rank + "</p></td>").appendTo(str);
+                        .md5 + "' target='_blank'>" + info[i].title + "</a><br>" + info[
+                            i].notes + "Notes/" + info[i].total + "Total/" + info[i].rank + "</td>").appendTo(str);
 
                     // Artist
                     if (info[i].url != "" && info[i].url != null) {
                       $("<td width='25%'>" +
                         "<a href='" + info[
                             i]
-                        .url + "' target='_blank'>" + info[i].artist + "</a><p>" + info[
-                            i].event + "</p></td>").appendTo(str);
+                        .url + "' target='_blank'>" + info[i].artist + "</a><br>" + info[
+                            i].event + "</td>").appendTo(str);
                     }
                     else {
-                      $("<td width='25%'>" + info[i].artist + "<p>" + info[
-                            i].event + "</p></td>").appendTo(str);
+                      $("<td width='25%'>" + info[i].artist + "<br>" + info[
+                            i].event + "</td>").appendTo(str);
                         }                    
 
                     // Chart
@@ -148,7 +148,7 @@
                 $("</tbody>").appendTo(obj);
 
                 if (obj_sep != null) {
-                    obj_sep.html("<td class='table-dark' style='text-align:center' colspan='7'>" + "<b>" + mark + x +
+                    obj_sep.html("<td class='table-dark' style='text-align:center' colspan='8'>" + "<b>" + mark + x +
                         " (" + count + "譜面)</b></td>");
                 }
             }
