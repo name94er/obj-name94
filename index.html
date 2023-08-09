@@ -68,7 +68,7 @@
                 var obj = $("#table_int");
 
                 obj.html("");
-                $("<thead class='table-dark'><tr><th>Level</th><th>Youtube</th><th>Genre</th><th>Title</th><th>Artist</th><th>Chart</th><th>Comment</th></tr></thead><tbody>")
+                $("<thead class='table-dark'><tr><th>Level</th><th>Youtube</th><th>IR</th><th>Genre</th><th>Title</th><th>Artist</th><th>Chart</th><th>Comment</th></tr></thead><tbody>")
                     .appendTo(obj);
                 var obj_sep = null;
                 for (var i = 0; i < info.length; i++) {
@@ -95,12 +95,21 @@
                             i]
                         .youtube + "' target='_blank'>" + "動画" + "</a></td>").appendTo(str);
 
+                    // IR
+                    $("<td width='3%'>" +
+                        "<a href='http://www.dream-pro.info/~lavalse/LR2IR/search.cgi?mode=ranking&bmsmd5=" + info[
+                            i]
+                        .md5 + "' target='_blank'>" + "LR2IR" + "</a><br>" +
+                      "<a href='https://mocha-repository.info/song.php?sha256=" + info[
+                            i]
+                        .sha256 + "' target='_blank'>" + "Mocha" + "</a></td>").appendTo(str);
+                    
                     // Genre
                     $("<td width='15%'>" + info[i].genre + "</td>").appendTo(str);
 
                     // Title
                     $("<td width='30%'>" +
-                        "<a href='http://www.dream-pro.info/~lavalse/LR2IR/search.cgi?mode=ranking&bmsmd5=" + info[
+                        "<a href='http://www.ribbit.xyz/bms/score/view?md5=" + info[
                             i]
                         .md5 + "' target='_blank'>" + info[i].title + "</a><p>" + info[
                             i].notes + "Notes/" + info[i].total + "Total/" + info[i].rank + "</p></td>").appendTo(str);
